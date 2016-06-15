@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/06/2012 10:38:16 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="pe.com.peruInka.core.domain.Product" table="product">
+		<id name="id" type="java.lang.Long">
+			<column name="id" />
+			<generator class="identity" />
+		</id>
+<!-- 		<version name="version" type="java.lang.Integer"> -->
+<!-- 			<column name="version" /> -->
+<!-- 		</version> -->
+
+		<property name="productName" type="string">
+			<column name="productName" length="50" />
+		</property>
+		<property name="price" type="string">
+			<column name="price" length="11" />
+		</property>
+		<property name="description" type="string">
+			<column name="description" length="80" />
+		</property>
+<!-- 		<property name="typeDocument" type="string"> -->
+<!-- 			<column name="typeDocument" length="20" /> -->
+<!-- 		</property> -->
+		<property name="attribute" type="string">
+			<column name="attribute" length="25" />
+		</property>
+		<property name="createBy" type="string">
+			<column name="createBy" length="15" />
+		</property>
+		<property name="lastUpdatedBy" type="string">
+			<column name="lastUpdatedBy" length="15" />
+		</property>
+		<property name="VERSION" type="int">
+			<column name="VERSION" />
+		</property>
+
+        <many-to-one name="statusProduct" class="pe.com.peruInka.core.domain.StatusProduct" lazy="false" fetch="select">
+         <column name="status" />
+        </many-to-one>	
+        
+        <many-to-one name="hotel" class="pe.com.peruInka.core.domain.Hotel" lazy="false" fetch="select" 
+        			 cascade="all">
+            <column name="hotelId" />
+        </many-to-one>	
+        
+<!--         <many-to-one name="person" class="pe.com.peruInka.core.domain.Person" lazy="false" fetch="select"  -->
+<!--         					cascade="all"> -->
+<!--             <column name="personId" /> -->
+<!--         </many-to-one> -->
+<!--     typeDocument --> 
+
+<!-- status --> 
+<!--         <many-to-one name="statusPerson" class="pe.com.peruInka.core.domain.StatusPerson" lazy="false" fetch="select"> -->
+<!--             <column name="status" /> -->
+<!--         </many-to-one>		 -->
+
+
+	</class>
+</hibernate-mapping>

@@ -24,7 +24,7 @@ public class HotelController {
 	
 	@RequestMapping(value = "admin/hotelboard", method = RequestMethod.GET)
 	public String homedashboard(Model model, HttpServletRequest request) {
-		request.getSession().setAttribute("menuHeader", "home");
+		request.getSession().setAttribute("menuHeader", "hotel");
 		// request.getSession().setAttribute("menuHeader", "home");
 		model.addAttribute("listHotel", peruInkaService.finAllHotel());
 		System.out.println("admin/hotelboard");

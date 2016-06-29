@@ -29,7 +29,7 @@ public class ProductController {
 	@RequestMapping(value = "admin/productboard", method = RequestMethod.GET)
 	public String adminProductboard(Model model, HttpServletRequest request) {
 		
-		request.getSession().setAttribute("menuHeader", "productboard");
+		request.getSession().setAttribute("menuHeader", "producto");
 		
 		model.addAttribute("listProduct", peruInkaService.findProduct());
 		

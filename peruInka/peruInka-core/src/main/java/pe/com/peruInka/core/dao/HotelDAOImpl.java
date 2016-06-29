@@ -59,4 +59,5 @@ public class HotelDAOImpl extends BaseDAOHibernate implements HotelDAO{
 	public List<TypeProduct> findTypeProduct() {
 		return find(TypeProduct.class, "from TypeProduct");
 	}
+	
 }

@@ -18,9 +18,23 @@ public class Customer extends BaseEntity implements Serializable{
 	private Date dateLastUpdated; 
 	private String lastUpdatedBy;       
 	private int version;
+	private Person person;
+	private Enterprice enterprice;
 	
 	
 	
+	public Person getPerson() {
+		return person;
+	}
+	public void setPerson(Person person) {
+		this.person = person;
+	}
+	public Enterprice getEnterprice() {
+		return enterprice;
+	}
+	public void setEnterprice(Enterprice enterprice) {
+		this.enterprice = enterprice;
+	}
 	public String getCreatedBy() {
 		return createdBy;
 	}

@@ -11,6 +11,8 @@
 		<mapping resource="pe/com/peruInka/core/domain/UserSystem.hbm.xml" />
 		<mapping resource="pe/com/peruInka/core/domain/Hotel.hbm.xml" />
 		<mapping resource="pe/com/peruInka/core/domain/Product.hbm.xml" />
+		<mapping resource="pe/com/peruInka/core/domain/Customer.hbm.xml" />
+		<mapping resource="pe/com/peruInka/core/domain/Enterprice.hbm.xml" />
 
 
 	</session-factory>

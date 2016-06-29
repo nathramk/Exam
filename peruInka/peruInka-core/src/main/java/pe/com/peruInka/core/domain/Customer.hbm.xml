@@ -40,10 +40,14 @@
         <many-to-one name="statusCustomer" class="pe.com.peruInka.core.domain.StatusCustomer" lazy="false" fetch="select">
             <column name="status" />
         </many-to-one>		
-<!-- 		<many-to-one name="enterprice" class="pe.com.peruInka.core.domain.Enterprice" lazy="false" fetch="select"  -->
-<!--         					cascade="all"> -->
-<!--             <column name="enterpriceId" /> -->
-<!--         </many-to-one>	 -->
+		<many-to-one name="enterprice" class="pe.com.peruInka.core.domain.Enterprice" lazy="false" fetch="select" 
+        					cascade="all">
+            <column name="enterpriceId" />
+        </many-to-one>	
+        <many-to-one name="person" class="pe.com.peruInka.core.domain.Person" lazy="false" fetch="select" 
+        					cascade="all">
+        <column name="personId" />
+        </many-to-one>
 
 
 		<!-- auditory -->

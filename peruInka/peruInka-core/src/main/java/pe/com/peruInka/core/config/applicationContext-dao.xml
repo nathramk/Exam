@@ -61,4 +61,8 @@
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 	
+	<bean id="customerDAO" class="pe.com.peruInka.core.dao.CustomerDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
 </beans>

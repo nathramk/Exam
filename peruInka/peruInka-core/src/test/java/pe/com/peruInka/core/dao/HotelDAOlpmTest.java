@@ -4,16 +4,22 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import pe.com.peruInka.core.domain.Customer;
+import pe.com.peruInka.core.domain.Enterprice;
 import pe.com.peruInka.core.domain.Hotel;
 import pe.com.peruInka.core.domain.Product;
+import pe.com.peruInka.core.domain.StatusCustomer;
+import pe.com.peruInka.core.domain.StatusEnterprice;
 import pe.com.peruInka.core.domain.StatusHotel;
 import pe.com.peruInka.core.domain.StatusProduct;
-import pe.com.peruInka.core.domain.UserSystem;
 
 public class HotelDAOlpmTest extends AbstractUnitTest{
 
 	@Autowired
 	protected HotelDAO hotelDAO;
+	
+	@Autowired
+	protected CustomerDAO customerDAO;
 	
 	public void test() {
 		System.out.println(hotelDAO);
@@ -87,6 +93,43 @@ public class HotelDAOlpmTest extends AbstractUnitTest{
 			System.out.println(product2.getProductName()+" :::: "+product2.getHotel().getBusinessName());
 //					getUserName()+"  ::: "+userSystem2.getPerson().getName());
 		}
+	}
+	
+//	List<Customer> findCustomer();
+//	
+//	void saveCustomer(Customer customer);
+	
+	public void testFindCustomer(){
+		System.out.println(" ::: "+customerDAO.findCustomer());
+	}
+	
+	
+	public void testFindEnterprice(){
+		System.out.print(" ::: "+customerDAO.findEnterprice());
+	}
+	
+	public void testSaveCustomer(){
+		Customer customer=new Customer();
+		customer.setCreatedBy("admin");
+		customer.setVersion(1);
+		
+		StatusCustomer statusCustomer = new StatusCustomer();
+		statusCustomer.setTypeCode(StatusCustomer.CUSTOMER_ACT.toString());
+		customer.setStatusCustomer(statusCustomer);
+		
+		Enterprice enterprice=new Enterprice();
+		enterprice.setBusinessName("papas SAC");
+		enterprice.setRuc("78945221");
+		enterprice.setAddress("jr. Los Manzaños # 87954");
+		
+		StatusEnterprice  statusEnterprice = new  StatusEnterprice();
+		statusEnterprice.setTypeCode(StatusEnterprice.ENTERPRICE_ACT.toString());
+		enterprice.setStatusEnterprice(statusEnterprice);
+		
+		customer.setEnterprice(enterprice);
+		
+		customerDAO.saveCustomer(customer);
+		setComplete();
 	}
 }
 

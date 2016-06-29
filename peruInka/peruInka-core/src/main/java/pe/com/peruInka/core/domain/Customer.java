@@ -20,9 +20,16 @@ public class Customer extends BaseEntity implements Serializable{
 	private int version;
 	private Person person;
 	private Enterprice enterprice;
+	private StatusCustomer statusCustomer;
 	
 	
 	
+	public StatusCustomer getStatusCustomer() {
+		return statusCustomer;
+	}
+	public void setStatusCustomer(StatusCustomer statusCustomer) {
+		this.statusCustomer = statusCustomer;
+	}
 	public Person getPerson() {
 		return person;
 	}

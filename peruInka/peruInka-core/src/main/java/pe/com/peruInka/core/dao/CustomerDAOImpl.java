@@ -7,7 +7,7 @@ import pe.com.peruInka.core.domain.Enterprice;
 import pe.com.peruInka.core.domain.StatusCustomer;
 import pe.com.peruInka.core.domain.StatusEnterprice;
 
-public class CustomerDAOImpl extends BaseDAOHibernate{
+public class CustomerDAOImpl extends BaseDAOHibernate implements CustomerDAO{
 
 	public List<Customer> findCustomer(){
 		return find(Customer.class, "from Customer");

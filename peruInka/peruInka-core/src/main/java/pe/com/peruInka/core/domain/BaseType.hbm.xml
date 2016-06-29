@@ -25,11 +25,14 @@
 			<column name="orderBy"></column>
 		</property>
 		
-<!-- 		<subclass name="pe.com.peruInka.core.domain.TypeDocument" discriminator-value="TYPE_DOCUMENT" /> -->
-<!-- 		<subclass name="pe.com.peruInka.core.domain.StatusPerson" discriminator-value="STATUS_PERSON" /> -->
-<!-- 		<subclass name="pe.com.peruInka.core.domain.StatusUser" discriminator-value="STATUS_USER" /> -->
-<!-- 		<subclass name="pe.com.peruInka.core.domain.StatusHotel" discriminator-value="STATUS_HOTEL" /> -->
-<!-- 		<subclass name="pe.com.peruInka.core.domain.StatusProduct" discriminator-value="STATUS_PRODUCT" /> -->
-<!-- 		<subclass name="pe.com.peruInka.core.domain.TypeProduct" discriminator-value="TYPE_PRODUCT" /> -->
+		<subclass name="pe.com.peruInka.core.domain.TypeDocument" discriminator-value="TYPE_DOCUMENT" />
+		<subclass name="pe.com.peruInka.core.domain.StatusPerson" discriminator-value="STATUS_PERSON" />
+		<subclass name="pe.com.peruInka.core.domain.StatusUser" discriminator-value="STATUS_USER" />
+		<subclass name="pe.com.peruInka.core.domain.StatusHotel" discriminator-value="STATUS_HOTEL" />
+		<subclass name="pe.com.peruInka.core.domain.StatusProduct" discriminator-value="STATUS_PRODUCT" />
+		<subclass name="pe.com.peruInka.core.domain.TypeProduct" discriminator-value="TYPE_PRODUCT" />
+		<subclass name="pe.com.peruInka.core.domain.StatusCustomer" discriminator-value="STATUS_CUSTOMER" />
+		<subclass name="pe.com.peruInka.core.domain.StatusEnterprice" discriminator-value="STATUS_ENTERPRICE" />	
+		
 	</class>
 </hibernate-mapping>

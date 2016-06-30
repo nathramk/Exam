@@ -45,6 +45,10 @@ contextPath = "<%=request.getContextPath()%>";
 						<li <c:if test="${menuHeader eq 'hotelboard'}"> class="active"</c:if>><a href="<%=request.getContextPath() %>/admin/hotelboard.html">Hotel</a></li>
 						<li <c:if test="${menuHeader eq 'productboard'}"> class="active"</c:if>><a href="<%=request.getContextPath() %>/admin/productboard.html">Producto</a></li>
 						
+						
+						<li <c:if test="${menuHeader eq 'maintain'}"> class="active"</c:if>><a href="<%=request.getContextPath() %>/maintain/customerboard.html">Customer</a></li>
+						<li <c:if test="${menuHeader eq 'enterpriceboard'}"> class="active"</c:if>><a href="<%=request.getContextPath() %>/maintain/enterpriceboard.html">Empresa</a></li>
+						
 					</ul>
 				</nav>
 			</div>
